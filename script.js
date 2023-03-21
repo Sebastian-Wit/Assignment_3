@@ -44,7 +44,7 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    let table = getElementById("grid");
+    let table = document.getElementById("grid");
     if(numRows > 0){
         table.deleteRow(numRows - 1);
         numRows --;
@@ -56,8 +56,8 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    let table = getElementById("grid");
-    let rows = getElementsByTagName("tr");
+    let table = document.getElementById("grid");
+    let rows = table.getElementsByTagName("tr");
     if(numCols > 0){
         for(let i = 0; i < numRows; i++){
             rows[i].deleteCell(numCols - 1);
@@ -80,12 +80,12 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    let table = getElementById("grid");
+    let table = document.getElementById("grid");
     let rows = table.getElementsByTagName("tr");
     for(let i = 0; i < numRows; i++){
         for(let j = 0; j < numCols; j++){
             let cell = rows[i].cells[j];
-            if(cell.style.backgroundColor == "white"){
+            if(!cell.style.backgroundColor || cell.style.backgroundColor == "white"){ //The cells are only set to white after a clear, otherwise they don't have a background color
                 cell.style.backgroundColor = colorSelected;
             }
         }
