@@ -44,7 +44,7 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    let table = getElementsById("grid");
+    let table = getElementById("grid");
     if(numRows > 0){
         table.deleteRow(numRows - 1);
         numRows --;
@@ -85,7 +85,7 @@ function fillU(){
     for(let i = 0; i < numRows; i++){
         for(let j = 0; j < numCols; j++){
             let cell = rows[i].cells[j];
-            if(!cell.style.backgroundColor || cell.style.backgroundColor == "white"){
+            if(cell.style.backgroundColor == "white"){
                 cell.style.backgroundColor = colorSelected;
             }
         }
