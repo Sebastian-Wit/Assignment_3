@@ -1,3 +1,6 @@
+# My Comments:
+I worked on the project alone, my github username is Sebastian-Wit. I didn't do any merge requests or anything like that since I worked on it by myself.
+
 # grid-maker-starter-code
 This repository is the starter code for Assignment 3 - Grid Maker.
 
